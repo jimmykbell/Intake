@@ -9,16 +9,12 @@
       font-family: Arial, sans-serif;
       background-color: #fff;
       padding: 20px;
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
       color: #222;
     }
-    .question {
-      display: none;
-    }
-    .question.active {
-      display: block;
-    }
+    .question { display: none; }
+    .question.active { display: block; }
     button {
       margin: 10px 0;
       padding: 12px;
@@ -30,118 +26,42 @@
       border-radius: 6px;
       cursor: pointer;
     }
-    button:hover {
-      background-color: #003e7e;
-    }
-    .back {
-      background-color: #ccc;
-      color: #000;
-    }
-    .summary-table {
-      border-collapse: collapse;
-      width: 100%;
-      margin-top: 10px;
-    }
-    .summary-table td, .summary-table th {
-      border: 1px solid #ddd;
-      padding: 8px;
-    }
+    button:hover { background-color: #003e7e; }
+    .back { background-color: #ccc; color: #000; }
   </style>
 </head>
 <body>
 
-  <div id="q1" class="question active">
-    <h2>Welcome to the Tiger Program Readiness Questionnaire</h2>
-    <p>Karate Atlanta’s Tiger Program is the result of over 25 years of working with young students and families. It was created specifically for children ages 4 to 6 and is backed by the experience of the American Taekwondo Association, founded in 1969.</p>
-    <p>Our goal isn’t just to teach kicks and punches — it’s to help your child build the focus, confidence, respect, coordination, and classroom habits they’ll need for school and life.</p>
-    <p><strong>Is your child currently attending preschool or kindergarten?</strong></p>
-    <button onclick="goTo('q2')">Yes</button>
-    <button onclick="goTo('q8')">No</button>
-  </div>
+<div id="q1" class="question active">
+  <h2>Welcome to the Tiger Program Readiness Questionnaire</h2>
+  <p>Karate Atlanta’s Tiger Program is the result of over 25 years of working with young students and families. It was created specifically for children ages 4 to 6 and is backed by the experience of the American Taekwondo Association, founded in 1969.</p>
+  <p>Our goal isn’t just to teach kicks and punches — it’s to help your child build the focus, confidence, respect, coordination, and classroom habits they’ll need for school and life.</p>
+  <p><strong>Is your child currently attending preschool or kindergarten?</strong></p>
+  <button onclick="goTo('q2')">Yes</button>
+  <button onclick="goTo('q8')">No</button>
+</div>
 
-  <div id="q2" class="question">
-    <p>Do they easily follow directions, wait their turn, and raise their hand before speaking — or do they still need help with those classroom habits?</p>
-    <button onclick="goTo('q3')">They do those things easily</button>
-    <button onclick="goTo('q7')">They still need help</button>
-    <button class="back" onclick="goBack('q1')">Back</button>
-  </div>
+<div id="q2" class="question">
+  <p>Since your child is already in an organized school structure, they may already be used to taking directions, waiting in line, and raising their hand before speaking.</p>
+  <p><strong>Do you feel your child does these things easily, or would benefit from more help and reinforcement?</strong></p>
+  <button onclick="goTo('q3')">They do those things easily</button>
+  <button onclick="goTo('q7')">They still need help</button>
+  <button class="back" onclick="goTo('q1')">Back</button>
+</div>
 
-  <div id="q3" class="question">
-    <p>Has your child ever participated in recreational activities like soccer, gymnastics, dance, or swim?</p>
-    <button onclick="goTo('q4')">Yes</button>
-    <button onclick="goTo('q5')">No, this would be their first organized activity</button>
-    <button class="back" onclick="goBack('q2')">Back</button>
-  </div>
+<div id="q8" class="question">
+  <p><strong>Every child develops at their own pace.</strong> Since your child hasn’t started preschool yet, how would you describe their ability to follow directions, wait their turn, and focus during group activities?</p>
+  <button onclick="goTo('q3')">They do well</button>
+  <button onclick="goTo('q7')">Still learning</button>
+  <button class="back" onclick="goTo('q1')">Back</button>
+</div>
 
-  <div id="q4" class="question">
-    <p>Rec sports are often short-term and parent-led. Karate Atlanta’s Tiger Program is different — it uses professional instructors, structured lessons, and life-skill training through martial arts.</p>
-    <p><strong>Are you looking for a program that helps build strong habits and structure?</strong></p>
-    <button onclick="goTo('receipt')">Yes</button>
-    <button onclick="goTo('trial')">No, just looking for something recreational</button>
-    <button class="back" onclick="goBack('q3')">Back</button>
-  </div>
-
-  <div id="q5" class="question">
-    <p>This may be your child’s first activity — that’s exciting! Karate Atlanta provides the perfect structure for early development in confidence, focus, and balance.</p>
-    <p><strong>Are you ready to begin helping them build those habits with support from our team?</strong></p>
-    <button onclick="goTo('receipt')">Yes</button>
-    <button onclick="goTo('trial')">No, just trying something fun for now</button>
-    <button class="back" onclick="goBack('q3')">Back</button>
-  </div>
-
-  <div id="q7" class="question">
-    <p>Karate Atlanta understands that young children develop at different speeds. Our structured program helps reinforce listening, respect, and coordination through repetition and fun.</p>
-    <p><strong>Would you prefer a program that helps build those skills over time, or something more recreational?</strong></p>
-    <button onclick="goTo('q3')">We want help building those skills</button>
-    <button onclick="goTo('trial')">Just looking for something recreational</button>
-    <button class="back" onclick="goBack('q2')">Back</button>
-  </div>
-
-  <div id="q8" class="question">
-    <p>Since your child hasn’t started school yet, how would you describe their ability to follow directions and focus in a group setting?</p>
-    <button onclick="goTo('q3')">They do those things well</button>
-    <button onclick="goTo('q7')">They still need help</button>
-    <button class="back" onclick="goBack('q1')">Back</button>
-  </div>
-
-  <!-- TIGER RECOMMENDATION PAGE -->
-  <div id="receipt" class="question">
-    <h2>🎉 Your Child is Ready for the Tiger Program!</h2>
-    <p>You've shown that your child is ready for a structured martial arts experience — and you’re the kind of parent who wants more than just a seasonal sport. Great choice!</p>
-
-    <h3>✅ Readiness Summary</h3>
-    <table class="summary-table">
-      <tr><td>School Status</td><td>✅ In preschool or kindergarten</td></tr>
-      <tr><td>Follows Directions</td><td>✅ Confident and consistent</td></tr>
-      <tr><td>Group Experience</td><td>✅ Has participated in group activities</td></tr>
-      <tr><td>Parent Support</td><td>✅ Committed to structure and growth</td></tr>
-    </table>
-
-    <p>Next, you'll meet with a Karate Atlanta instructor for a short 1-on-1 evaluation. They’ll confirm your child’s readiness and explain how to get started — including savings available when enrolling today.</p>
-
-    <h3>🛡️ What would you like to do next?</h3>
-    <button onclick="window.location.href='form.html'">Learn More About Tiger & Enroll</button>
-    <button onclick="window.location.href='trial.html'">I'd Prefer the Trial Program</button>
-    <button class="back" onclick="goBack('q5')">Back</button>
-  </div>
-
-  <!-- TRIAL PAGE PLACEHOLDER -->
-  <div id="trial" class="question">
-    <h2>🎯 Trial Membership Selected</h2>
-    <p>You've chosen to begin with our 5-Class Trial. It's a great way to experience our program and see how your child responds to structured training. An instructor will follow up with scheduling and next steps.</p>
-    <button onclick="window.location.href='trial.html'">Continue to Trial Signup</button>
-    <button class="back" onclick="history.back()">Back</button>
-  </div>
-
-  <script>
-    function goTo(id) {
-      document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-    function goBack(id) {
-      goTo(id);
-    }
-  </script>
+<script>
+function goTo(id) {
+  document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
 
 </body>
 </html>
