@@ -32,6 +32,7 @@
 </head>
 <body>
 
+<!-- Q1 -->
 <div id="q1" class="question active">
   <h2>Welcome to the Tiger Program Readiness Questionnaire</h2>
   <p>Karate Atlanta’s Tiger Program is the result of over 25 years of working with young students and families. It was created specifically for children ages 4 to 6 and is backed by the experience of the American Taekwondo Association, founded in 1969.</p>
@@ -41,6 +42,7 @@
   <button onclick="goTo('q8')">No</button>
 </div>
 
+<!-- Q2 -->
 <div id="q2" class="question">
   <p>Since your child is already in an organized school structure, they may already be used to taking directions, waiting in line, and raising their hand before speaking.</p>
   <p><strong>Do you feel your child does these things easily, or would benefit from more help and reinforcement?</strong></p>
@@ -49,11 +51,37 @@
   <button class="back" onclick="goTo('q1')">Back</button>
 </div>
 
+<!-- Q8 -->
 <div id="q8" class="question">
   <p><strong>Every child develops at their own pace.</strong> Since your child hasn’t started preschool yet, how would you describe their ability to follow directions, wait their turn, and focus during group activities?</p>
   <button onclick="goTo('q3')">They do well</button>
   <button onclick="goTo('q7')">Still learning</button>
   <button class="back" onclick="goTo('q1')">Back</button>
+</div>
+
+<!-- Q3 -->
+<div id="q3" class="question">
+  <p><strong>Has your child ever participated in recreational activities like soccer, gymnastics, dance, or swim?</strong></p>
+  <button onclick="goTo('q4')">Yes</button>
+  <button onclick="goTo('q5')">No, this would be their first activity</button>
+  <button class="back" onclick="goTo('q2')">Back</button>
+</div>
+
+<!-- Q7 -->
+<div id="q7" class="question">
+  <p>At the younger ages we’ve noticed students all develop at different times. Just like school, Karate Atlanta is based off of structure and discipline — while also creating the love of martial arts through fun and exciting classes.</p>
+  <p>In order to better develop those skills in following directions, it will take time and isn’t something that happens overnight.</p>
+  <p><strong>Are you looking for an organization that will reinforce these life skills and help prepare your child for school — or are you just looking for something more like a recreational sport?</strong></p>
+  <button onclick="goTo('q3')">Help build life skills</button>
+  <button onclick="goTo('trial')">Just something recreational</button>
+  <button class="back" onclick="goTo('q2')">Back</button>
+</div>
+
+<!-- Placeholder for Trial Checkout -->
+<div id="trial" class="question">
+  <h3>Trial Membership Selected</h3>
+  <p>You’ve chosen to begin with our 5-class trial! One of our instructors will follow up to help schedule your child’s first visit.</p>
+  <button class="back" onclick="goTo('q7')">Back</button>
 </div>
 
 <script>
