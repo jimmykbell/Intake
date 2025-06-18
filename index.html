@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Your Perfect Program</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    .question {
+      display: none;
+    }
+    .question.active {
+      display: block;
+    }
+    button {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 1rem;
+    }
+    .result {
+      display: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h2>Find Your Perfect Karate Atlanta Program</h2>
 
+  <div id="q1" class="question active">
+    <p>What is your age?</p>
+    <button onclick="handleAge(4)">4–6</button>
+    <button onclick="handleAge(7)">7–8</button>
+    <button onclick="handleAge(9)">9–11</button>
+    <button onclick="handleAge(12)">12–17</button>
+    <button onclick="handleAge(18)">18+</button>
+  </div>
+
+  <div id="q2" class="question">
+    <p>Are they in preschool or kindergarten?</p>
+    <button onclick="showResult('Tiger Membership')">Yes</button>
+    <button onclick="showResult('Trial Membership')">No</button>
+  </div>
+
+  <div id="result" class="result"></div>
+
+  <script>
+    function handleAge(age) {
+      document.getElementById('q1').classList.remove('active');
+      if (age <= 6) {
+        document.getElementById('q2').classList.add('active');
+      } else {
+        // Add more branches here in future
+        showResult('More options coming soon!');
+      }
+    }
+
+    function showResult(resultText) {
+      document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
+      const resultDiv = document.getElementById('result');
+      resultDiv.textContent = "We recommend: " + resultText;
+      resultDiv.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
