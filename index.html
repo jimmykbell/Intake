@@ -44,16 +44,16 @@
 
 <!-- Q2 -->
 <div id="q2" class="question">
-  <p>Since your child is already in an organized school structure, they may already be used to taking directions, waiting in line, and raising their hand before speaking.</p>
-  <p><strong>Do you feel your child does these things easily, or would benefit from more help and reinforcement?</strong></p>
+  <p>Since your child is already in an organized school structure, they should be familiar with taking directions, following the instructor, waiting in line, and raising their hand before talking.</p>
+  <p><strong>Do you feel your child does these tasks easily, or needs more help and reinforcement with that level of classroom skills?</strong></p>
   <button onclick="goTo('q3')">They do those things easily</button>
   <button onclick="goTo('q7')">They still need help</button>
   <button class="back" onclick="goTo('q1')">Back</button>
 </div>
 
-<!-- Q8 -->
+<!-- Q8 (from Q1 = No) -->
 <div id="q8" class="question">
-  <p><strong>Every child develops at their own pace.</strong> Since your child hasn’t started preschool yet, how would you describe their ability to follow directions, wait their turn, and focus during group activities?</p>
+  <p><strong>Since your child hasn’t started school yet, how well do they follow directions in group settings like birthday parties or playdates?</strong></p>
   <button onclick="goTo('q3')">They do well</button>
   <button onclick="goTo('q7')">Still learning</button>
   <button class="back" onclick="goTo('q1')">Back</button>
@@ -67,21 +67,71 @@
   <button class="back" onclick="goTo('q2')">Back</button>
 </div>
 
-<!-- Q7 -->
+<!-- Q4 -->
+<div id="q4" class="question">
+  <p>Many recreational sports are typically 1 day a week and casually coached by parent volunteers. Our program is taught by full-time professionals and is designed to develop physical and mental skills through repetition and structure.</p>
+  <p><strong>Does that sound like something you’re looking for, or are you just exploring something fun for now?</strong></p>
+  <button onclick="goTo('q6')">Looking for structure and development</button>
+  <button onclick="goTo('trial')">Just something fun</button>
+  <button class="back" onclick="goTo('q3')">Back</button>
+</div>
+
+<!-- Q5 -->
+<div id="q5" class="question">
+  <p>Just like with school or reading, physical and mental habits take time to develop. Our Tiger Program helps young students with things like left/right recognition, balance, focus, and how to respond to strangers and bullies — but it does take consistency.</p>
+  <p><strong>Are you ready to begin helping them build habits like focus and balance?</strong></p>
+  <button onclick="goTo('q6')">Yes</button>
+  <button onclick="goTo('trial')">Not sure yet</button>
+  <button class="back" onclick="goTo('q3')">Back</button>
+</div>
+
+<!-- Q6 -->
+<div id="q6" class="question">
+  <p>Karate Atlanta has been in business for over 25 years and belongs to the American Taekwondo Association, which was founded in 1969. We've used all these years of experience to develop this questionnaire — with a little help from AI (hey, it’s 2025!).</p>
+  <p><strong>Today, we believe your child is ready to enroll in the Tiger Program — our structured 6-month membership for ages 4–6.</strong></p>
+  <p>Would you like to speak with an instructor about the Tiger Program and savings for enrolling today, or would you still prefer to start with our 5-class trial?</p>
+  <button onclick="goTo('success')">Learn more about Tiger Program</button>
+  <button onclick="goTo('trial')">Start with Trial</button>
+  <button class="back" onclick="goTo('q5')">Back</button>
+</div>
+
+<!-- Q7 (needs more help) -->
 <div id="q7" class="question">
-  <p>At the younger ages we’ve noticed students all develop at different times. Just like school, Karate Atlanta is based off of structure and discipline — while also creating the love of martial arts through fun and exciting classes.</p>
+  <p>At the younger ages we’ve noticed students all develop at different times. Just like school, Karate Atlanta is based off of structure and discipline — while also creating a love of martial arts through fun and exciting classes.</p>
   <p>In order to better develop those skills in following directions, it will take time and isn’t something that happens overnight.</p>
-  <p><strong>Are you looking for an organization that will reinforce these life skills and help prepare your child for school — or are you just looking for something more like a recreational sport?</strong></p>
+  <p><strong>Are you looking for an organization that will reinforce these life skills and help prepare your child for school — or just something more recreational?</strong></p>
   <button onclick="goTo('q3')">Help build life skills</button>
   <button onclick="goTo('trial')">Just something recreational</button>
   <button class="back" onclick="goTo('q2')">Back</button>
 </div>
 
-<!-- Placeholder for Trial Checkout -->
-<div id="trial" class="question">
-  <h3>Trial Membership Selected</h3>
-  <p>You’ve chosen to begin with our 5-class trial! One of our instructors will follow up to help schedule your child’s first visit.</p>
-  <button class="back" onclick="goTo('q7')">Back</button>
+<!-- Success Page -->
+<div id="success" class="question">
+  <h2>You're Ready!</h2>
+  <p>✅ Based on your answers, your child is ready for the Tiger Program!</p>
+  <p>This page acts like a “readiness report” you can show your instructor. They'll do a 15-minute evaluation to confirm the fit and help you get started.</p>
+  <p>Please continue by filling out your contact info on the next page so we can reserve your spot and share enrollment savings.</p>
+  <button onclick="alert('Redirect to contact form...')">Continue to Contact Info</button>
+</div>
+
+<!-- Success Page -->
+<div id="success" class="question">
+  <h2>🐯 Tiger Program Readiness Report</h2>
+  <p>Based on your answers, your child shows strong signs of being ready for the Tiger Program — our professionally developed martial arts program for 4–6 year olds!</p>
+
+  <h3>📋 Readiness Summary:</h3>
+  <ul>
+    <li>✅ Able to follow directions and participate in group settings</li>
+    <li>✅ Displays early classroom habits like listening, lining up, and staying on task</li>
+    <li>✅ Shows enthusiasm for structured, skill-building activities</li>
+    <li>✅ Parent is supportive and aligned with Karate Atlanta’s growth mindset</li>
+  </ul>
+
+  <p>Before enrolling, your child will complete a short 15-minute evaluation with an instructor to confirm fit and answer your questions.</p>
+
+  <p><strong>After the evaluation, would you like:</strong></p>
+  <button onclick="goTo('contact')">📘 To learn more about the Tiger Program & enrollment options</button>
+  <button onclick="goTo('trial')">🟦 To still begin with the 5-class trial for now</button>
 </div>
 
 <script>
